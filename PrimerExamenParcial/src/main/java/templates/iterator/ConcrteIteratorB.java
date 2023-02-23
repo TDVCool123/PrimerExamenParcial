@@ -1,0 +1,23 @@
+package templates.iterator;
+
+import java.util.List;
+
+public class ConcrteIteratorB implements Iterator{
+
+    private List<String> names;
+    private int position = 0;
+    public ConcrteIteratorB(List<String> names){
+        this.names=names;
+    }
+
+
+    @Override
+    public Object next() {
+        return this.names.get(position++);
+    }
+
+    @Override
+    public boolean hasNext() {
+        return this.names.size() !=0 && position < this.names.size();
+    }
+}
