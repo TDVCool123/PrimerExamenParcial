@@ -28,7 +28,7 @@ public class Camara {
 
 
     public void showInfo(){
-        System.out.println("Foco: "+ foco);
-        System.out.println("Lente: "+ lente);
+        System.out.println("Camara > Foco: "+ foco);
+        System.out.println("Camara > Lente: "+ lente);
     }
 }

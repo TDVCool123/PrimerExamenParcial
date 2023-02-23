@@ -3,33 +3,31 @@ package exercises.exercise2;
 public class Client {
 
     public static void main(String[]args) {
-        Celular prototypeC = new Celular(
+        Celular celular = new Celular(
         );
 
-        prototypeC.setSueldo(5000);
-        prototypeC.setCarga_Horaria(80);
-        prototypeC.setCurso_Educacion_Superior(true);
-        prototypeC.setAccesoPlataforma(true);
-        prototypeC.setMarcadoBiométrico(false);
-        prototypeC.setHoraEntrada(8);
-        prototypeC.setHoraSalida(18);
-        prototypeC.setPersona(new Camara("",""));
-        prototypeC.showInfo();
+        celular.setModelo("A1");
+        celular.setTamaño("15 cm");
+        celular.setPeso(60);
+        celular.setImei(10000);
+        celular.setOrigen("Bolivia");
+        celular.setCamara(new Camara("10","5mp"));
+        celular.showInfo();
 
-        Celular c1 = prototypeC.clone();
-        c1.setPersona(new Camara("Jose", "Vargas"));
+        Celular c1 = celular.clone();
+        c1.setImei(10001);
 
-        Celular c2 = prototypeC.clone();
-        c2.setPersona(new Camara("Sebastian", "Tapia"));
+        Celular c2 = celular.clone();
+        c2.setImei(10002);
 
-        Celular c3 = prototypeC.clone();
-        c3.setPersona(new Camara("Gabriel", "Flores"));
+        Celular c3 = celular.clone();
+        c3.setImei(10003);
 
-        Celular c4 = prototypeC.clone();
-        c4.setPersona(new Camara("Gerald", "Martinez"));
+        Celular c4 = celular.clone();
+        c4.setImei(10004);
 
-        Celular c5 = prototypeC.clone();
-        c5.setPersona(new Camara("Kevin", "Morales"));
+        Celular c5 = celular.clone();
+        c5.setImei(10005);
 
 
 

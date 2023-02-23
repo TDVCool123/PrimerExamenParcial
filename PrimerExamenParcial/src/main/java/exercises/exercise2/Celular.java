@@ -6,103 +6,85 @@ public class Celular implements ICelular {
     private String tamaño;
     private int peso;
     private Camara camara;
-
-    private int pulgadas;
     private int imei;
     private String origen;
 
 
-
-    public int getSueldo() {
-        return sueldo;
+    public String getModelo() {
+        return modelo;
     }
 
-    public int getCarga_Horaria() {
-        return carga_Horaria;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public boolean isCurso_Educacion_Superior() {
-        return curso_Educacion_Superior;
+    public String getTamaño() {
+        return tamaño;
     }
 
-    public boolean isAccesoPlataforma() {
-        return accesoPlataforma;
+    public void setTamaño(String tamaño) {
+        this.tamaño = tamaño;
     }
 
-    public boolean isMarcadoBiométrico() {
-        return marcadoBiométrico;
+    public int getPeso() {
+        return peso;
     }
 
-    public int getHoraEntrada() {
-        return horaEntrada;
+    public void setPeso(int peso) {
+        this.peso = peso;
     }
 
-    public int getHoraSalida() {
-        return horaSalida;
+    public Camara getCamara() {
+        return camara;
     }
 
-    public void setSueldo(int sueldo) {
-        this.sueldo = sueldo;
+    public void setCamara(Camara camara) {
+        this.camara = camara;
     }
 
-    public void setCarga_Horaria(int carga_Horaria) {
-        this.carga_Horaria = carga_Horaria;
+    public int getImei() {
+        return imei;
     }
 
-    public void setCurso_Educacion_Superior(boolean curso_Educacion_Superior) {
-        this.curso_Educacion_Superior = curso_Educacion_Superior;
+    public void setImei(int imei) {
+        this.imei = imei;
     }
 
-    public void setAccesoPlataforma(boolean accesoPlataforma) {
-        this.accesoPlataforma = accesoPlataforma;
+    public String getOrigen() {
+        return origen;
     }
 
-    public void setMarcadoBiométrico(boolean marcadoBiométrico) {
-        this.marcadoBiométrico = marcadoBiométrico;
-    }
-
-    public void setHoraEntrada(int horaEntrada) {
-        this.horaEntrada = horaEntrada;
-    }
-
-    public void setHoraSalida(int horaSalida) {
-        this.horaSalida = horaSalida;
-    }
-
-    public Camara getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Camara persona) {
-        this.persona = persona;
+    public void setOrigen(String origen) {
+        this.origen = origen;
     }
 
 
     @Override
     public Celular clone() {
+
         Celular clone = new Celular();
-        clone.setSueldo(this.getSueldo());
-        clone.setCarga_Horaria(this.getCarga_Horaria());
-        clone.setCurso_Educacion_Superior(this.isCurso_Educacion_Superior());
-        clone.setAccesoPlataforma(this.isAccesoPlataforma());
-        clone.setMarcadoBiométrico(this.isMarcadoBiométrico());
-        clone.setHoraEntrada(this.getHoraEntrada());
-        clone.setHoraSalida(this.getHoraSalida());
-        clone.setPersona(this.getPersona());
+
+        clone.setModelo(this.getModelo());
+        clone.setTamaño(this.getTamaño());
+        clone.setPeso(this.getPeso());
+        clone.setCamara(this.getCamara());
+        clone.setImei(this.getImei());
+        clone.setOrigen(this.getOrigen());
         return clone;
+
     }
 
 
     public void showInfo() {
-        System.out.println("\n ----------------  \n");
-        System.out.println("sueldo " + getSueldo());
-        System.out.println("Carga_Horaria " + getCarga_Horaria());
-        System.out.println("Curso_Educacion_Superior " + isCurso_Educacion_Superior());
-        System.out.println("AccesoPlataforma " + isAccesoPlataforma());
-        System.out.println("Marcado Biometrico " + isMarcadoBiométrico());
-        System.out.println("HoraEntrada " + getHoraEntrada());
-        System.out.println("HoraSalida " + getHoraSalida());
-        persona.showInfo();
+        System.out.println("----------------------------------------");
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("Tamaño: " + getTamaño());
+        System.out.println("Peso: " + getPeso());
+
+        System.out.println("Imei: " + getImei());
+        System.out.println("Origen " + getOrigen());
+
+        camara.showInfo();
     }
 
 
